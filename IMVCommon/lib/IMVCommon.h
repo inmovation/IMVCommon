@@ -6,6 +6,18 @@
 //  Copyright (c) 2015年 inmovation. All rights reserved.
 //
 
+#import "IMVNavigationController.h"
+#import "IMVTabBarController.h"
+#import "IMVTabBarItem.h"
+#import "IMVTemplateViewController.h"
+#import "IMVTemplateViewController+PickImage.h"
+#import "IMVUserManager.h"
+#import "IMVDatabaseManager.h"
+#import "IMVFileManager.h"
+#import "IMVEntity.h"
+#import "IMVRestEntity.h"
+#import "IMVRestPage.h"
+
 #define IOS7 [UIDevice currentDevice].systemVersion.floatValue >= 7.0
 #define IOS6 [UIDevice currentDevice].systemVersion.floatValue >= 6.0
 #define IOS5 [UIDevice currentDevice].systemVersion.floatValue >= 5.0
