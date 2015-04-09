@@ -1,0 +1,583 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AD0148541AD52626003355FD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0148531AD52626003355FD /* main.m */; };
+		AD0148571AD52626003355FD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0148561AD52626003355FD /* AppDelegate.m */; };
+		AD01485A1AD52626003355FD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0148591AD52626003355FD /* ViewController.m */; };
+		AD01485D1AD52626003355FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD01485B1AD52626003355FD /* Main.storyboard */; };
+		AD01485F1AD52626003355FD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD01485E1AD52626003355FD /* Images.xcassets */; };
+		AD0148621AD52626003355FD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD0148601AD52626003355FD /* LaunchScreen.xib */; };
+		AD01486E1AD52626003355FD /* IMVCommonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AD01486D1AD52626003355FD /* IMVCommonTests.m */; };
+		AD0148C71AD5299B003355FD /* IMVNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0148A81AD5299B003355FD /* IMVNavigationController.m */; };
+		AD0148C81AD5299B003355FD /* IMVTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0148AA1AD5299B003355FD /* IMVTabBarController.m */; };
+		AD0148C91AD5299B003355FD /* IMVTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0148AC1AD5299B003355FD /* IMVTabBarItem.m */; };
+		AD0148CA1AD5299B003355FD /* IMVTemplateViewController+PickImage.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0148AF1AD5299B003355FD /* IMVTemplateViewController+PickImage.m */; };
+		AD0148CB1AD5299B003355FD /* IMVTemplateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0148B11AD5299B003355FD /* IMVTemplateViewController.m */; };
+		AD0148CC1AD5299B003355FD /* IMVEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0148B61AD5299B003355FD /* IMVEntity.m */; };
+		AD0148CD1AD5299B003355FD /* IMVRestEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0148B81AD5299B003355FD /* IMVRestEntity.m */; };
+		AD0148CE1AD5299B003355FD /* IMVRestPage.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0148BA1AD5299B003355FD /* IMVRestPage.m */; };
+		AD0148CF1AD5299B003355FD /* IMVDatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0148BE1AD5299B003355FD /* IMVDatabaseManager.m */; };
+		AD0148D01AD5299B003355FD /* IMVFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0148C01AD5299B003355FD /* IMVFileManager.m */; };
+		AD0148D11AD5299B003355FD /* IMVUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0148C21AD5299B003355FD /* IMVUserManager.m */; };
+		AD0148D21AD5299B003355FD /* UIImage+FixedOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0148C51AD5299B003355FD /* UIImage+FixedOrientation.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AD0148681AD52626003355FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AD0148461AD52626003355FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AD01484D1AD52626003355FD;
+			remoteInfo = IMVCommon;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AD01484E1AD52626003355FD /* IMVCommon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IMVCommon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD0148521AD52626003355FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD0148531AD52626003355FD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AD0148551AD52626003355FD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AD0148561AD52626003355FD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AD0148581AD52626003355FD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		AD0148591AD52626003355FD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AD01485C1AD52626003355FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AD01485E1AD52626003355FD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		AD0148611AD52626003355FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		AD0148671AD52626003355FD /* IMVCommonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IMVCommonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD01486C1AD52626003355FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD01486D1AD52626003355FD /* IMVCommonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IMVCommonTests.m; sourceTree = "<group>"; };
+		AD0148A71AD5299B003355FD /* IMVNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMVNavigationController.h; sourceTree = "<group>"; };
+		AD0148A81AD5299B003355FD /* IMVNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMVNavigationController.m; sourceTree = "<group>"; };
+		AD0148A91AD5299B003355FD /* IMVTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMVTabBarController.h; sourceTree = "<group>"; };
+		AD0148AA1AD5299B003355FD /* IMVTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMVTabBarController.m; sourceTree = "<group>"; };
+		AD0148AB1AD5299B003355FD /* IMVTabBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMVTabBarItem.h; sourceTree = "<group>"; };
+		AD0148AC1AD5299B003355FD /* IMVTabBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMVTabBarItem.m; sourceTree = "<group>"; };
+		AD0148AE1AD5299B003355FD /* IMVTemplateViewController+PickImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IMVTemplateViewController+PickImage.h"; sourceTree = "<group>"; };
+		AD0148AF1AD5299B003355FD /* IMVTemplateViewController+PickImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IMVTemplateViewController+PickImage.m"; sourceTree = "<group>"; };
+		AD0148B01AD5299B003355FD /* IMVTemplateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMVTemplateViewController.h; sourceTree = "<group>"; };
+		AD0148B11AD5299B003355FD /* IMVTemplateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMVTemplateViewController.m; sourceTree = "<group>"; };
+		AD0148B21AD5299B003355FD /* IMVCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMVCommon.h; sourceTree = "<group>"; };
+		AD0148B51AD5299B003355FD /* IMVEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMVEntity.h; sourceTree = "<group>"; };
+		AD0148B61AD5299B003355FD /* IMVEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMVEntity.m; sourceTree = "<group>"; };
+		AD0148B71AD5299B003355FD /* IMVRestEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMVRestEntity.h; sourceTree = "<group>"; };
+		AD0148B81AD5299B003355FD /* IMVRestEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMVRestEntity.m; sourceTree = "<group>"; };
+		AD0148B91AD5299B003355FD /* IMVRestPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMVRestPage.h; sourceTree = "<group>"; };
+		AD0148BA1AD5299B003355FD /* IMVRestPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMVRestPage.m; sourceTree = "<group>"; };
+		AD0148BD1AD5299B003355FD /* IMVDatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMVDatabaseManager.h; sourceTree = "<group>"; };
+		AD0148BE1AD5299B003355FD /* IMVDatabaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMVDatabaseManager.m; sourceTree = "<group>"; };
+		AD0148BF1AD5299B003355FD /* IMVFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMVFileManager.h; sourceTree = "<group>"; };
+		AD0148C01AD5299B003355FD /* IMVFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMVFileManager.m; sourceTree = "<group>"; };
+		AD0148C11AD5299B003355FD /* IMVUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMVUserManager.h; sourceTree = "<group>"; };
+		AD0148C21AD5299B003355FD /* IMVUserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMVUserManager.m; sourceTree = "<group>"; };
+		AD0148C41AD5299B003355FD /* UIImage+FixedOrientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FixedOrientation.h"; sourceTree = "<group>"; };
+		AD0148C51AD5299B003355FD /* UIImage+FixedOrientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FixedOrientation.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AD01484B1AD52626003355FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD0148641AD52626003355FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AD0148451AD52626003355FD = {
+			isa = PBXGroup;
+			children = (
+				AD0148501AD52626003355FD /* IMVCommon */,
+				AD01486A1AD52626003355FD /* IMVCommonTests */,
+				AD01484F1AD52626003355FD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AD01484F1AD52626003355FD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AD01484E1AD52626003355FD /* IMVCommon.app */,
+				AD0148671AD52626003355FD /* IMVCommonTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AD0148501AD52626003355FD /* IMVCommon */ = {
+			isa = PBXGroup;
+			children = (
+				AD0148A41AD5299B003355FD /* lib */,
+				AD0148551AD52626003355FD /* AppDelegate.h */,
+				AD0148561AD52626003355FD /* AppDelegate.m */,
+				AD0148581AD52626003355FD /* ViewController.h */,
+				AD0148591AD52626003355FD /* ViewController.m */,
+				AD01485B1AD52626003355FD /* Main.storyboard */,
+				AD01485E1AD52626003355FD /* Images.xcassets */,
+				AD0148601AD52626003355FD /* LaunchScreen.xib */,
+				AD0148511AD52626003355FD /* Supporting Files */,
+			);
+			path = IMVCommon;
+			sourceTree = "<group>";
+		};
+		AD0148511AD52626003355FD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AD0148521AD52626003355FD /* Info.plist */,
+				AD0148531AD52626003355FD /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AD01486A1AD52626003355FD /* IMVCommonTests */ = {
+			isa = PBXGroup;
+			children = (
+				AD01486D1AD52626003355FD /* IMVCommonTests.m */,
+				AD01486B1AD52626003355FD /* Supporting Files */,
+			);
+			path = IMVCommonTests;
+			sourceTree = "<group>";
+		};
+		AD01486B1AD52626003355FD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AD01486C1AD52626003355FD /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AD0148A41AD5299B003355FD /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				AD0148B21AD5299B003355FD /* IMVCommon.h */,
+				AD0148A51AD5299B003355FD /* Controller */,
+				AD0148B31AD5299B003355FD /* Model */,
+				AD0148C61AD5299B003355FD /* View */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		AD0148A51AD5299B003355FD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AD0148A61AD5299B003355FD /* Tab&Nav */,
+				AD0148AD1AD5299B003355FD /* Template */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		AD0148A61AD5299B003355FD /* Tab&Nav */ = {
+			isa = PBXGroup;
+			children = (
+				AD0148A71AD5299B003355FD /* IMVNavigationController.h */,
+				AD0148A81AD5299B003355FD /* IMVNavigationController.m */,
+				AD0148A91AD5299B003355FD /* IMVTabBarController.h */,
+				AD0148AA1AD5299B003355FD /* IMVTabBarController.m */,
+				AD0148AB1AD5299B003355FD /* IMVTabBarItem.h */,
+				AD0148AC1AD5299B003355FD /* IMVTabBarItem.m */,
+			);
+			path = "Tab&Nav";
+			sourceTree = "<group>";
+		};
+		AD0148AD1AD5299B003355FD /* Template */ = {
+			isa = PBXGroup;
+			children = (
+				AD0148AE1AD5299B003355FD /* IMVTemplateViewController+PickImage.h */,
+				AD0148AF1AD5299B003355FD /* IMVTemplateViewController+PickImage.m */,
+				AD0148B01AD5299B003355FD /* IMVTemplateViewController.h */,
+				AD0148B11AD5299B003355FD /* IMVTemplateViewController.m */,
+			);
+			path = Template;
+			sourceTree = "<group>";
+		};
+		AD0148B31AD5299B003355FD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AD0148B41AD5299B003355FD /* Entity */,
+				AD0148BB1AD5299B003355FD /* HTTPEngine */,
+				AD0148BC1AD5299B003355FD /* Service */,
+				AD0148C31AD5299B003355FD /* Utils */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AD0148B41AD5299B003355FD /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				AD0148B51AD5299B003355FD /* IMVEntity.h */,
+				AD0148B61AD5299B003355FD /* IMVEntity.m */,
+				AD0148B71AD5299B003355FD /* IMVRestEntity.h */,
+				AD0148B81AD5299B003355FD /* IMVRestEntity.m */,
+				AD0148B91AD5299B003355FD /* IMVRestPage.h */,
+				AD0148BA1AD5299B003355FD /* IMVRestPage.m */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		AD0148BB1AD5299B003355FD /* HTTPEngine */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HTTPEngine;
+			sourceTree = "<group>";
+		};
+		AD0148BC1AD5299B003355FD /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				AD0148BD1AD5299B003355FD /* IMVDatabaseManager.h */,
+				AD0148BE1AD5299B003355FD /* IMVDatabaseManager.m */,
+				AD0148BF1AD5299B003355FD /* IMVFileManager.h */,
+				AD0148C01AD5299B003355FD /* IMVFileManager.m */,
+				AD0148C11AD5299B003355FD /* IMVUserManager.h */,
+				AD0148C21AD5299B003355FD /* IMVUserManager.m */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		AD0148C31AD5299B003355FD /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				AD0148C41AD5299B003355FD /* UIImage+FixedOrientation.h */,
+				AD0148C51AD5299B003355FD /* UIImage+FixedOrientation.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		AD0148C61AD5299B003355FD /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AD01484D1AD52626003355FD /* IMVCommon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD0148711AD52626003355FD /* Build configuration list for PBXNativeTarget "IMVCommon" */;
+			buildPhases = (
+				AD01484A1AD52626003355FD /* Sources */,
+				AD01484B1AD52626003355FD /* Frameworks */,
+				AD01484C1AD52626003355FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IMVCommon;
+			productName = IMVCommon;
+			productReference = AD01484E1AD52626003355FD /* IMVCommon.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AD0148661AD52626003355FD /* IMVCommonTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD0148741AD52626003355FD /* Build configuration list for PBXNativeTarget "IMVCommonTests" */;
+			buildPhases = (
+				AD0148631AD52626003355FD /* Sources */,
+				AD0148641AD52626003355FD /* Frameworks */,
+				AD0148651AD52626003355FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AD0148691AD52626003355FD /* PBXTargetDependency */,
+			);
+			name = IMVCommonTests;
+			productName = IMVCommonTests;
+			productReference = AD0148671AD52626003355FD /* IMVCommonTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AD0148461AD52626003355FD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = inmovation;
+				TargetAttributes = {
+					AD01484D1AD52626003355FD = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					AD0148661AD52626003355FD = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = AD01484D1AD52626003355FD;
+					};
+				};
+			};
+			buildConfigurationList = AD0148491AD52626003355FD /* Build configuration list for PBXProject "IMVCommon" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AD0148451AD52626003355FD;
+			productRefGroup = AD01484F1AD52626003355FD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AD01484D1AD52626003355FD /* IMVCommon */,
+				AD0148661AD52626003355FD /* IMVCommonTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AD01484C1AD52626003355FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD01485D1AD52626003355FD /* Main.storyboard in Resources */,
+				AD0148621AD52626003355FD /* LaunchScreen.xib in Resources */,
+				AD01485F1AD52626003355FD /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD0148651AD52626003355FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AD01484A1AD52626003355FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD0148CE1AD5299B003355FD /* IMVRestPage.m in Sources */,
+				AD0148C71AD5299B003355FD /* IMVNavigationController.m in Sources */,
+				AD0148D01AD5299B003355FD /* IMVFileManager.m in Sources */,
+				AD0148D21AD5299B003355FD /* UIImage+FixedOrientation.m in Sources */,
+				AD0148CD1AD5299B003355FD /* IMVRestEntity.m in Sources */,
+				AD0148CC1AD5299B003355FD /* IMVEntity.m in Sources */,
+				AD01485A1AD52626003355FD /* ViewController.m in Sources */,
+				AD0148571AD52626003355FD /* AppDelegate.m in Sources */,
+				AD0148C81AD5299B003355FD /* IMVTabBarController.m in Sources */,
+				AD0148CA1AD5299B003355FD /* IMVTemplateViewController+PickImage.m in Sources */,
+				AD0148CB1AD5299B003355FD /* IMVTemplateViewController.m in Sources */,
+				AD0148541AD52626003355FD /* main.m in Sources */,
+				AD0148D11AD5299B003355FD /* IMVUserManager.m in Sources */,
+				AD0148C91AD5299B003355FD /* IMVTabBarItem.m in Sources */,
+				AD0148CF1AD5299B003355FD /* IMVDatabaseManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD0148631AD52626003355FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD01486E1AD52626003355FD /* IMVCommonTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AD0148691AD52626003355FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AD01484D1AD52626003355FD /* IMVCommon */;
+			targetProxy = AD0148681AD52626003355FD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AD01485B1AD52626003355FD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AD01485C1AD52626003355FD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AD0148601AD52626003355FD /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AD0148611AD52626003355FD /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AD01486F1AD52626003355FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		AD0148701AD52626003355FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AD0148721AD52626003355FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = IMVCommon/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		AD0148731AD52626003355FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = IMVCommon/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		AD0148751AD52626003355FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = IMVCommonTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IMVCommon.app/IMVCommon";
+			};
+			name = Debug;
+		};
+		AD0148761AD52626003355FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = IMVCommonTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IMVCommon.app/IMVCommon";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AD0148491AD52626003355FD /* Build configuration list for PBXProject "IMVCommon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD01486F1AD52626003355FD /* Debug */,
+				AD0148701AD52626003355FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AD0148711AD52626003355FD /* Build configuration list for PBXNativeTarget "IMVCommon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD0148721AD52626003355FD /* Debug */,
+				AD0148731AD52626003355FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AD0148741AD52626003355FD /* Build configuration list for PBXNativeTarget "IMVCommonTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD0148751AD52626003355FD /* Debug */,
+				AD0148761AD52626003355FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AD0148461AD52626003355FD /* Project object */;
+}
