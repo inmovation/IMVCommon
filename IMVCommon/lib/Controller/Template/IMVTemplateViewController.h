@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "IMVCommon.h"
 
 /**
  *  viewController的基类

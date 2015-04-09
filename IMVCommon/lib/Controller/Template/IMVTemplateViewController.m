@@ -7,7 +7,7 @@
 //
 
 #import "IMVTemplateViewController.h"
-
+#import "IMVCommon.h"
 
 @interface IMVTemplateViewController ()
 

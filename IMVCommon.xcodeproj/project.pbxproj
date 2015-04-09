@@ -163,7 +163,6 @@
 				AD0148B21AD5299B003355FD /* IMVCommon.h */,
 				AD0148A51AD5299B003355FD /* Controller */,
 				AD0148B31AD5299B003355FD /* Model */,
-				AD0148C61AD5299B003355FD /* View */,
 			);
 			path = lib;
 			sourceTree = "<group>";
@@ -252,13 +251,6 @@
 				AD0148C51AD5299B003355FD /* UIImage+FixedOrientation.m */,
 			);
 			path = Utils;
-			sourceTree = "<group>";
-		};
-		AD0148C61AD5299B003355FD /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
