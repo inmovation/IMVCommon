@@ -89,7 +89,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "IMVCommon/lib/*"
+  s.source_files  = "IMVCommon/lib/*.h", "IMVCommon/lib/Controller", "IMVCommon/lib/Controller/Tab&Nav", "IMVCommon/lib/Controller/Template", "IMVCommon/lib/Controller/*/*.{h,m}", "IMVCommon/lib/Model", "IMVCommon/lib/Model/Entity", "IMVCommon/lib/HTTPEngine", "IMVCommon/lib/Service", "IMVCommon/lib/Utils", "IMVCommon/lib/*/*.{h,m}", "IMVCommon/lib/View"
   # s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
