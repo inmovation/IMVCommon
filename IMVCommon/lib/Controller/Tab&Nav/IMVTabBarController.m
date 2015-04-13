@@ -38,8 +38,19 @@
         self.tabBar.tintColor = [UIColor colorForTabBarBarTint];
     }
     
+#if __IPHONE_OS_VERSION_MIN_REQUIRED < 60000
+    
+    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor colorForTabBarItemTitleSelected], UITextAttributeTextColor, nil] forState:UIControlStateSelected];
+    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor colorForTabBarItemTitleNormal], UITextAttributeTextColor, nil] forState:UIControlStateNormal];
+#else
     [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor colorForTabBarItemTitleSelected], NSForegroundColorAttributeName, nil] forState:UIControlStateSelected];
     [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor colorForTabBarItemTitleNormal], NSForegroundColorAttributeName, nil] forState:UIControlStateNormal];
+#endif
+    
+    UIImage *bgImage = [UIImage imageForTabBarBackground];
+    if (bgImage) {
+        self.tabBar.backgroundImage = bgImage;
+    }
 }
 
 - (void)viewDidLoad
@@ -70,8 +81,8 @@
         UIViewController *vc = [self.viewControllers objectAtIndex:i];
         IMVTabBarItem *tabBarItem = [[IMVTabBarItem alloc] init];
         tabBarItem.title = [itemTitles objectAtIndex:i];
-        tabBarItem.normalImage = [UIImage imageNamed:[normalImages objectAtIndex:i]];
-        tabBarItem.highlightedImage = [UIImage imageNamed:[selectedImages objectAtIndex:i]];
+        tabBarItem.normalImage = [UIImage imageForName:[normalImages objectAtIndex:i]];
+        tabBarItem.highlightedImage = [UIImage imageForName:[selectedImages objectAtIndex:i]];
         vc.tabBarItem = tabBarItem;
     }
 }

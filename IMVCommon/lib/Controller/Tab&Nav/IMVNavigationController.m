@@ -43,7 +43,11 @@
                                     nil];
 #endif
     self.navigationBar.titleTextAttributes = textAttributes;
-    self.navigationBar.backIndicatorImage = [UIImage imageForNaviBarBackground];
+    
+    UIImage *naviBarBgImage = [UIImage imageForNaviBarBackground];
+    if (naviBarBgImage) {
+        self.navigationBar.backIndicatorImage = naviBarBgImage;
+    }
 }
 
 - (void)viewDidLoad
