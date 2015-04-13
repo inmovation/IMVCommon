@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <IMVThemeManager.h>
+#import "IMVThemeManager.h"
 
 /**
  *  viewController的基类

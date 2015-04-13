@@ -6,7 +6,7 @@
 //  Copyright (c) 2014年 shaohua.chen. All rights reserved.
 //
 
-#import <IMVThemeManager.h>
+#import "IMVThemeManager.h"
 
 #import "IMVTabBarController.h"
 #import "IMVTabBarItem.h"
