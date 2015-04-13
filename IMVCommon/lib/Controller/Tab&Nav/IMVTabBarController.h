@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 /**
- *  封装了tabBarController的一些样式和旋转
+ *  从配置中读取样式，支持切换
  */
 @interface IMVTabBarController : UITabBarController
 

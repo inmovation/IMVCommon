@@ -5,18 +5,11 @@
 //  Created by shaohua.chen on 14-4-4.
 //  Copyright (c) 2014年 shaohua.chen. All rights reserved.
 //
+#import <IMVThemeManager.h>
 
 #import "IMVNavigationController.h"
 
-@interface IMVNavigationController ()
-
-@end
-
 @implementation IMVNavigationController
-@synthesize barTintColor = _barTintColor;
-@synthesize tintColor = _tintColor;
-@synthesize titleColor = _titleColor;
-@synthesize titleFont = _titleFont;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -24,82 +17,43 @@
     if (self) {
         // Custom initialization
         
-        _barTintColor = [UIColor colorWithRed:0.0/255 green:133.0/255 blue:85.0/255 alpha:1.0];
-        _tintColor = [UIColor whiteColor];
-        _titleColor = [UIColor colorWithWhite:255.0/255 alpha:1.0];
-        _titleFont = [UIFont systemFontOfSize:20.0];
-        _translucent = YES;
-        self.navigationBar.translucent = self.translucent;
-        
-        if ([UIDevice currentDevice].systemVersion.floatValue>=7.0) {
-            [self.navigationBar setBarTintColor:self.barTintColor];
-            [self.navigationBar setTintColor:self.tintColor];
-        }else {
-            [self.navigationBar setTintColor:self.barTintColor];
-        }
-        
-        NSDictionary *textAttributes = [NSDictionary dictionaryWithObjectsAndKeys:
-                                        self.titleColor, UITextAttributeTextColor,
-                                        self.titleFont, UITextAttributeFont,
-                                        nil];
-        self.navigationBar.titleTextAttributes = textAttributes;
     }
     return self;
 }
 
-- (void)setTranslucent:(BOOL)translucent
+- (void)initTheme
 {
-    _translucent = translucent;
-    self.navigationBar.translucent = self.translucent;
-}
-
-- (void)setTintColor:(UIColor *)tintColor
-{
-    _tintColor = tintColor;
     if ([UIDevice currentDevice].systemVersion.floatValue>=7.0) {
-        [self.navigationBar setTintColor:self.tintColor];
+        self.navigationBar.barTintColor = [UIColor colorForNaviBarBarTint];
+        self.navigationBar.tintColor = [UIColor colorForNaviBarTint];
     }else {
-        [self.navigationBar setTintColor:self.barTintColor];
+        self.navigationBar.tintColor = [UIColor colorForNaviBarBarTint];
     }
-}
+    
+#if __IPHONE_OS_VERSION_MIN_REQUIRED < 60000
 
-- (void)setBarTintColor:(UIColor *)barTintColor
-{
-    _barTintColor = barTintColor;
-    if ([UIDevice currentDevice].systemVersion.floatValue>=7.0) {
-        [self.navigationBar setBarTintColor:self.barTintColor];
-    }
-}
-
-- (void)setTitleColor:(UIColor *)titleColor
-{
-    _titleColor = titleColor;
     NSDictionary *textAttributes = [NSDictionary dictionaryWithObjectsAndKeys:
-                                    self.titleColor, UITextAttributeTextColor,
-                                    self.titleFont, UITextAttributeFont,
+                                    [UIColor colorForNaviBarTitle], UITextAttributeTextColor,
+                                    [UIFont fontForNaviBarTitle], UITextAttributeFont,
                                     nil];
-    [self.navigationBar setTitleTextAttributes:textAttributes];
-}
-
-- (void)setTitleFont:(UIFont *)titleFont
-{
-    _titleFont = titleFont;
+#else
     NSDictionary *textAttributes = [NSDictionary dictionaryWithObjectsAndKeys:
-                                    self.titleColor, UITextAttributeTextColor,
-                                    self.titleFont, UITextAttributeFont,
+                                    [UIColor colorForNaviBarTitle], NSForegroundColorAttributeName,
+                                    [UIFont fontForNaviBarTitle], NSFontAttributeName,
                                     nil];
-    [self.navigationBar setTitleTextAttributes:textAttributes];
-}
-
-- (void)setBarBackgroundImage:(UIImage *)barBackgroundImage
-{
-    [self.navigationBar setBackgroundImage:barBackgroundImage forBarMetrics:UIBarMetricsDefault];
+#endif
+    self.navigationBar.titleTextAttributes = textAttributes;
+    self.navigationBar.backIndicatorImage = [UIImage imageForNaviBarBackground];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self initTheme];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(initTheme) name:IMVNotificationThemeChanged object:nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -107,6 +61,12 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
 {

@@ -7,7 +7,6 @@
 //
 
 #import "IMVTemplateViewController.h"
-#import "IMVCommon.h"
 
 @interface IMVTemplateViewController ()
 
@@ -19,18 +18,19 @@
 
 @implementation IMVTemplateViewController
 
-- (UIColor *)backgroudColor
+- (void)initTheme
 {
-    if (!_backgroudColor) {
-        _backgroudColor = [UIColor whiteColor];
-    }
-    return _backgroudColor;
+    self.view.backgroundColor = [UIColor colorForViewBackgroud];
+    self.networkErrorView.backgroundColor = [UIColor colorForViewBackgroud];
+    self.emptyView.backgroundColor = [UIColor colorForViewBackgroud];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = self.backgroudColor;
     // Do any additional setup after loading the view.
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(initTheme) name:IMVNotificationThemeChanged object:nil];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -42,15 +42,18 @@
 {
     if (!_networkErrorView) {
 
-        _networkErrorView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight)];
-        _networkErrorView.backgroundColor = self.backgroudColor;
+        CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
+        CGFloat screenHeight = [UIScreen mainScreen].bounds.size.height;
+
+        _networkErrorView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, screenWidth, screenHeight)];
+        _networkErrorView.backgroundColor = [UIColor colorForViewBackgroud];
         [self.view addSubview:_networkErrorView];
         
-        UIImageView *networkBrokenImgView = [[UIImageView alloc] initWithFrame:CGRectMake(ScreenWidth/2.0-116.0/2, 90, 116, 82)];
+        UIImageView *networkBrokenImgView = [[UIImageView alloc] initWithFrame:CGRectMake(screenWidth/2.0-116.0/2, 90, 116, 82)];
         networkBrokenImgView.image = [UIImage imageNamed:@"network_broken"];
         [_networkErrorView addSubview:networkBrokenImgView];
         
-        UILabel *networkErrorLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 200, ScreenWidth, 20)];
+        UILabel *networkErrorLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 200, screenWidth, 20)];
         networkErrorLabel.text = @"加载失败";
         networkErrorLabel.textColor = [UIColor colorWithWhite:50.0/255 alpha:1.0];
         networkErrorLabel.font = [UIFont systemFontOfSize:18.0f];
@@ -62,7 +65,7 @@
         networkErrorLabel.backgroundColor = [UIColor clearColor];
         [_networkErrorView addSubview:networkErrorLabel];
         
-        UILabel *tryAgainLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 230, ScreenWidth, 20)];
+        UILabel *tryAgainLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 230, screenWidth, 20)];
         tryAgainLabel.textColor = [UIColor colorWithWhite:120.0/255 alpha:1.0];
         tryAgainLabel.text = @"请检查您的手机是否联网，点击按钮重新加载";
         tryAgainLabel.font = [UIFont systemFontOfSize:14.0];
@@ -75,7 +78,7 @@
         [_networkErrorView addSubview:tryAgainLabel];
         
         UIButton *tryAgainButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [tryAgainButton setFrame:CGRectMake(ScreenWidth/2-60, 300, 120, 40)];
+        [tryAgainButton setFrame:CGRectMake(screenWidth/2-60, 300, 120, 40)];
         [tryAgainButton setTitle:@"重新加载" forState:UIControlStateNormal];
         [tryAgainButton setTitleColor:[UIColor colorWithWhite:120.0/255 alpha:1.0] forState:UIControlStateNormal];
         [tryAgainButton setBackgroundImage:[[UIImage imageNamed:@"input_holdon_normal"] stretchableImageWithLeftCapWidth:10 topCapHeight:10] forState:UIControlStateNormal];
@@ -90,16 +93,17 @@
 {
     if (!_emptyView) {
         
+        CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
+        CGFloat screenHeight = [UIScreen mainScreen].bounds.size.height;
 
-        _emptyView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight)];
-        _emptyView.backgroundColor = self.backgroudColor;
+        _emptyView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, screenWidth, screenHeight)];
         [self.view addSubview:_emptyView];
         
-        UIImageView *emptyImgView = [[UIImageView alloc] initWithFrame:CGRectMake(ScreenWidth/2.0-45.0/2, 125, 45, 45)];
+        UIImageView *emptyImgView = [[UIImageView alloc] initWithFrame:CGRectMake(screenWidth/2.0-45.0/2, 125, 45, 45)];
         emptyImgView.image = [UIImage imageNamed:@"empty_icon"];
         [_emptyView addSubview:emptyImgView];
         
-        _emptyLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 200, ScreenWidth, 20)];
+        _emptyLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 200, screenWidth, 20)];
         _emptyLabel.textColor = [UIColor colorWithRed:191.0/255 green:191.0/255 blue:171.0/255 alpha:1.0];
         _emptyLabel.font = [UIFont systemFontOfSize:18.0f];
 #if __IPHONE_OS_VERSION_MIN_REQUIRED < 60000

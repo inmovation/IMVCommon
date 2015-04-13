@@ -7,16 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <IMVThemeManager.h>
 
 /**
  *  viewController的基类
  */
 @interface IMVTemplateViewController : UIViewController
 
-/**
- *  背景颜色
- */
-@property (strong, nonatomic) UIColor *backgroudColor;
+- (void)initTheme;
 
 /**
  *  显示空列表的提示界面

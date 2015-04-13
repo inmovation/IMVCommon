@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "IMVCommon.h"
+
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,8 +19,27 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    [DDLog addLogger:[DDTTYLogger sharedInstance]];
+    [[DDTTYLogger sharedInstance] setColorsEnabled:YES];
     // Override point for customization after application launch.
+    
+    
+    [[IMVThemeManager sharedInstence] useTheme:@"ThemeDefault" type:themeTypeBundle];
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    [self.window makeKeyAndVisible];
+    
+    ViewController *vc = [[ViewController alloc] initWithNibName:nil bundle:nil];
+    IMVNavigationController *navi = [[IMVNavigationController alloc] initWithRootViewController:vc];
+    
+    IMVTabBarController *tab = [[IMVTabBarController alloc] initWithNibName:nil bundle:nil];
+    [tab setViewControllers:@[navi] itemTitles:@[@"设置"] itemNormalImages:@[@"settingNormal"] itemSelectedImages:@[@"settingSelected"]];
+    
+    self.window.rootViewController = tab;
+    
     return YES;
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
