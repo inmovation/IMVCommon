@@ -25,6 +25,7 @@
 {
     self = [super init];
     if (self) {
+        [self initialize];
         [self.userManager addObserver:self forKeyPath:@"userId" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:nil];
     }
     return self;

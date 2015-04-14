@@ -1,8 +1,8 @@
 //
 //  TemplateViewController.m
-//  JXWKnowledgeManager
+//  IMVCommon
 //
-//  Created by Creolophus on 1/14/15.
+//  Created by 陈少华 on 1/14/15.
 //  Copyright (c) 2015 Creolophus. All rights reserved.
 //
 
@@ -20,7 +20,6 @@
     // Do any additional setup after loading the view.
     
     self.view.backgroundColor = [UIColor colorForViewBackgroud];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(initTheme) name:IMVNotificationThemeChanged object:nil];
 
 }
 
@@ -29,7 +28,17 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(initTheme) name:IMVNotificationThemeChanged object:nil];
+}
 
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [[NSNotificationCenter defaultCenter] removeObserver:self forKeyPath:IMVNotificationThemeChanged];
+}
 
 
 #pragma mark - AutorotateInterfaceOrientation

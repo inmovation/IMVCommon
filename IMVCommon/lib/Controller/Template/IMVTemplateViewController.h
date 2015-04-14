@@ -1,9 +1,9 @@
 //
 //  TemplateViewController.h
-//  JXWKnowledgeManager
+//  IMVCommon
 //
-//  Created by Creolophus on 1/14/15.
-//  Copyright (c) 2015 Creolophus. All rights reserved.
+//  Created by shaohua on 1/14/15.
+//  Copyright (c) 2015 shaohua. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
