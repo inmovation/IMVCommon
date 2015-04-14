@@ -29,6 +29,7 @@
 		ADBBD32E1ADCB47E00E4A8E1 /* IMVUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBBD3291ADCB47E00E4A8E1 /* IMVUserManager.m */; };
 		ADBBD32F1ADCB47E00E4A8E1 /* UIImage+FixedOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBBD32B1ADCB47E00E4A8E1 /* UIImage+FixedOrientation.m */; };
 		ADBE1A9C1ADB5C790055CA36 /* ThemeDefault.bundle in Resources */ = {isa = PBXBuildFile; fileRef = ADBE1A9B1ADB5C790055CA36 /* ThemeDefault.bundle */; };
+		ADD25CD61ADCEED200BBA195 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD25CD51ADCEED200BBA195 /* SettingViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,8 @@
 		ADBBD32A1ADCB47E00E4A8E1 /* UIImage+FixedOrientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FixedOrientation.h"; sourceTree = "<group>"; };
 		ADBBD32B1ADCB47E00E4A8E1 /* UIImage+FixedOrientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FixedOrientation.m"; sourceTree = "<group>"; };
 		ADBE1A9B1ADB5C790055CA36 /* ThemeDefault.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ThemeDefault.bundle; sourceTree = "<group>"; };
+		ADD25CD41ADCEED200BBA195 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		ADD25CD51ADCEED200BBA195 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 		C9B4C9F76B6E4AFFD6638688 /* Pods-IMVCommon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMVCommon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IMVCommon/Pods-IMVCommon.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,6 +147,8 @@
 				AD0148561AD52626003355FD /* AppDelegate.m */,
 				AD0148581AD52626003355FD /* ViewController.h */,
 				AD0148591AD52626003355FD /* ViewController.m */,
+				ADD25CD41ADCEED200BBA195 /* SettingViewController.h */,
+				ADD25CD51ADCEED200BBA195 /* SettingViewController.m */,
 				AD01485B1AD52626003355FD /* Main.storyboard */,
 				AD01485E1AD52626003355FD /* Images.xcassets */,
 				AD0148601AD52626003355FD /* LaunchScreen.xib */,
@@ -399,6 +404,7 @@
 			files = (
 				AD0148C71AD5299B003355FD /* IMVNavigationController.m in Sources */,
 				AD01485A1AD52626003355FD /* ViewController.m in Sources */,
+				ADD25CD61ADCEED200BBA195 /* SettingViewController.m in Sources */,
 				ADBBD32D1ADCB47E00E4A8E1 /* IMVFileManager.m in Sources */,
 				ADBBD3211ADCB47300E4A8E1 /* IMVRestEntity.m in Sources */,
 				AD0148571AD52626003355FD /* AppDelegate.m in Sources */,

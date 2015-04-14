@@ -37,7 +37,7 @@
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-    [[NSNotificationCenter defaultCenter] removeObserver:self forKeyPath:IMVNotificationThemeChanged];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:IMVNotificationThemeChanged object:nil];
 }
 
 
