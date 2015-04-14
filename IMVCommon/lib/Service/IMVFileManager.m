@@ -1,15 +1,15 @@
 //
-//  IMDatabase.m
+//  IMFileManager.m
 //  MobileExam
 //
-//  Created by 陈少华 on 15/4/2.
+//  Created by 陈少华 on 15/4/1.
 //  Copyright (c) 2015年 inmovation. All rights reserved.
 //
 
+#import "IMVFileManager.h"
 #import "IMVUserManager.h"
-#import "IMVDatabaseManager.h"
 
-@implementation IMVDatabaseManager
+@implementation IMVFileManager
 
 + (instancetype)sharedInstence
 {
@@ -25,6 +25,7 @@
 {
     self = [super init];
     if (self) {
+        [self initialize];
         [self.userManager addObserver:self forKeyPath:@"userId" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:nil];
     }
     return self;
@@ -33,9 +34,10 @@
 - (void)initialize
 {
     
+    _fileManager = [NSFileManager defaultManager];
     NSString *rootPath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:self.userManager.login];
-    if ([[NSFileManager defaultManager] createDirectoryAtPath:rootPath withIntermediateDirectories:YES attributes:nil error:nil]) {
-        _dbPath = [rootPath stringByAppendingPathComponent:self.dbName];
+    if ([_fileManager createDirectoryAtPath:rootPath withIntermediateDirectories:YES attributes:nil error:nil]) {
+        _rootPath = rootPath;
     }
 }
 
@@ -44,33 +46,10 @@
     [self.userManager removeObserver:self forKeyPath:@"userId" context:nil];
 }
 
-- (NSString *)dbName
-{
-    return [NSString stringWithFormat:@"%@.sqlite", [[[NSBundle mainBundle] infoDictionary] objectForKey:(NSString *)kCFBundleNameKey]];
-}
-
 - (IMVUserManager *)userManager
 {
     return [IMVUserManager sharedInstence];
 }
-
-- (NSString *)dbVersionKey
-{
-    return [NSString stringWithFormat:@"%@_dbversion", self.userManager.login];
-}
-
-- (void)setDbversion:(CGFloat)dbversion
-{
-    [[NSUserDefaults standardUserDefaults] setFloat:dbversion forKey:[self dbVersionKey]];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-}
-
-- (CGFloat)dbversion
-{
-    CGFloat dbversion = [[NSUserDefaults standardUserDefaults] floatForKey:[self dbVersionKey]];
-    return dbversion;
-}
-
 
 #pragma mark - KVO
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
@@ -84,5 +63,10 @@
             }
         }
     }
+    else
+    {
+        [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
+    }
 }
+
 @end

@@ -82,7 +82,7 @@ static UILabel *emptyLabel;
         emptyLabel.textColor = [UIColor colorWithRed:191.0/255 green:191.0/255 blue:171.0/255 alpha:1.0];
         emptyLabel.font = [UIFont systemFontOfSize:18.0f];
 #if __IPHONE_OS_VERSION_MIN_REQUIRED < 60000
-        _emptyLabel.textAlignment = UITextAlignmentCenter;
+        emptyLabel.textAlignment = UITextAlignmentCenter;
 #else
         emptyLabel.textAlignment = NSTextAlignmentCenter;
 #endif
