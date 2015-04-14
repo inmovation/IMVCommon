@@ -27,6 +27,7 @@
 		AD0148D01AD5299B003355FD /* IMVFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0148C01AD5299B003355FD /* IMVFileManager.m */; };
 		AD0148D11AD5299B003355FD /* IMVUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0148C21AD5299B003355FD /* IMVUserManager.m */; };
 		AD0148D21AD5299B003355FD /* UIImage+FixedOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0148C51AD5299B003355FD /* UIImage+FixedOrientation.m */; };
+		ADBBD3191ADCA56D00E4A8E1 /* IMVTemplateViewController+Hints.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBBD3181ADCA56D00E4A8E1 /* IMVTemplateViewController+Hints.m */; };
 		ADBE1A9C1ADB5C790055CA36 /* ThemeDefault.bundle in Resources */ = {isa = PBXBuildFile; fileRef = ADBE1A9B1ADB5C790055CA36 /* ThemeDefault.bundle */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +82,8 @@
 		AD0148C21AD5299B003355FD /* IMVUserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMVUserManager.m; sourceTree = "<group>"; };
 		AD0148C41AD5299B003355FD /* UIImage+FixedOrientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FixedOrientation.h"; sourceTree = "<group>"; };
 		AD0148C51AD5299B003355FD /* UIImage+FixedOrientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FixedOrientation.m"; sourceTree = "<group>"; };
+		ADBBD3171ADCA56D00E4A8E1 /* IMVTemplateViewController+Hints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IMVTemplateViewController+Hints.h"; sourceTree = "<group>"; };
+		ADBBD3181ADCA56D00E4A8E1 /* IMVTemplateViewController+Hints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IMVTemplateViewController+Hints.m"; sourceTree = "<group>"; };
 		ADBE1A9B1ADB5C790055CA36 /* ThemeDefault.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ThemeDefault.bundle; sourceTree = "<group>"; };
 		C9B4C9F76B6E4AFFD6638688 /* Pods-IMVCommon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMVCommon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IMVCommon/Pods-IMVCommon.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -215,6 +218,8 @@
 				AD0148AF1AD5299B003355FD /* IMVTemplateViewController+PickImage.m */,
 				AD0148B01AD5299B003355FD /* IMVTemplateViewController.h */,
 				AD0148B11AD5299B003355FD /* IMVTemplateViewController.m */,
+				ADBBD3171ADCA56D00E4A8E1 /* IMVTemplateViewController+Hints.h */,
+				ADBBD3181ADCA56D00E4A8E1 /* IMVTemplateViewController+Hints.m */,
 			);
 			path = Template;
 			sourceTree = "<group>";
@@ -428,6 +433,7 @@
 				AD0148CA1AD5299B003355FD /* IMVTemplateViewController+PickImage.m in Sources */,
 				AD0148CB1AD5299B003355FD /* IMVTemplateViewController.m in Sources */,
 				AD0148541AD52626003355FD /* main.m in Sources */,
+				ADBBD3191ADCA56D00E4A8E1 /* IMVTemplateViewController+Hints.m in Sources */,
 				AD0148D11AD5299B003355FD /* IMVUserManager.m in Sources */,
 				AD0148C91AD5299B003355FD /* IMVTabBarItem.m in Sources */,
 				AD0148CF1AD5299B003355FD /* IMVDatabaseManager.m in Sources */,

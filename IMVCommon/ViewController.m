@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "IMVTemplateViewController+Hints.h"
 #import "IMVCommon.h"
 
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate>
@@ -127,7 +127,12 @@
     if (indexPath.section == 1)
     {
         if (indexPath.row == 0) {
-            
+            [self hideEmptyView];
+        }
+    }
+    if (indexPath.section == 0) {
+        if (indexPath.row == 0) {
+            [self showEmptyViewWithFrame:self.view.bounds status:@"点击设置取消"];
         }
     }
 }
