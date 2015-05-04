@@ -1,4 +1,3 @@
-
 Pod::Spec.new do |s|
 
   s.name         = "IMVCommon"
@@ -6,7 +5,7 @@ Pod::Spec.new do |s|
   s.summary      = "common classes for all projects."
 
   s.description  = <<-DESC
-                   common classes for all projects.
+                   common classes for all projects……
                    DESC
 
   s.homepage     = "https://github.com/inmovation/IMVCommon"
@@ -18,9 +17,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios
   s.platform     = :ios, "5.0"
 
-  s.source       = { :git => "https://github.com/inmovation/IMVCommon.git", :tag =>  s.version.to_s }
-
-
+  s.source       = { :git => "https://github.com/inmovation/IMVCommon.git", :tag => "0.0.1" }
 
   s.source_files  = "IMVCommon/lib/*.h", "IMVCommon/lib/**/*.{h,m}"
   # s.exclude_files = "Classes/Exclude"
@@ -38,6 +35,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  s.dependency "CocoaLumberjack", "IMVTheme" 
+  s.dependencies = "IMVTheme", "CocoaLumberjack"
+  # s.dependency "CocoaLumberjack"
 
 end
