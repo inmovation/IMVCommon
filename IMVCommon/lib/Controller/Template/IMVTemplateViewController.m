@@ -21,6 +21,8 @@
     
     self.view.backgroundColor = [UIColor colorForViewBackgroud];
 
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(initTheme) name:IMVNotificationThemeChanged object:nil];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -28,15 +30,8 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)viewWillAppear:(BOOL)animated
+- (void)dealloc
 {
-    [super viewWillAppear:animated];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(initTheme) name:IMVNotificationThemeChanged object:nil];
-}
-
-- (void)viewWillDisappear:(BOOL)animated
-{
-    [super viewWillDisappear:animated];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:IMVNotificationThemeChanged object:nil];
 }
 

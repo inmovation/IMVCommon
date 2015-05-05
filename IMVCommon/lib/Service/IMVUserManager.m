@@ -7,6 +7,7 @@
 //
 
 #import "IMVUserManager.h"
+#import <UICKeyChainStore.h>
 
 #define IMUserManagerUserId @"IMUserManagerUserId"
 #define IMUserManagerLogin @"IMUserManagerLogin"
@@ -15,7 +16,10 @@
 #define IMUserManagerAutoLogin @"IMUserManagerAutoLogin"
 #define IMUserManagerRememberPsw @"IMUserManagerRememberPsw"
 
+#define IMUserManagerUDID @"IMUserManagerUDID"
+
 @implementation IMVUserManager
+@synthesize UDID = _UDID;
 
 + (instancetype)sharedInstence
 {
@@ -39,6 +43,32 @@
         _rememberPsw = [[NSUserDefaults standardUserDefaults] boolForKey:IMUserManagerRememberPsw];
     }
     return self;
+}
+
+- (NSString *)UDID
+{
+    if (_UDID && _UDID.length>0) {
+        return _UDID;
+    }
+    
+    _UDID = [UICKeyChainStore stringForKey:IMUserManagerUDID];
+    
+    if (_UDID && _UDID.length>0) {
+        return _UDID;
+    }
+    
+    _UDID = [NSUUID UUID].UUIDString;
+    [UICKeyChainStore setString:_UDID forKey:IMUserManagerUDID];
+    
+    return _UDID;
+}
+
+- (void)setUDID:(NSString *)UDID
+{
+    if ([UICKeyChainStore setString:UDID forKey:IMUserManagerUDID])
+    {
+        _UDID = UDID;
+    }
 }
 
 - (void)setLogin:(NSString *)userName

@@ -33,6 +33,8 @@
  */
 @property (strong, nonatomic) NSString *password;
 
+@property (strong, nonatomic) NSString *UDID;
+
 /**
  *  是否自动登录，可以在didFinishLaunchingWithOptions中判断是否自动登录
  */

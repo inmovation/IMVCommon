@@ -4,7 +4,8 @@ platform :ios, '5.0'
 target 'IMVCommon' do
 
 pod 'CocoaLumberjack'
-pod 'IMVTheme', :git => 'https://github.com/inmovation/IMVTheme.git', :tag => '0.0.1'
+pod 'IMVTheme'
+pod 'UICKeyChainStore'
 
 end
 
