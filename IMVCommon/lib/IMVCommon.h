@@ -11,7 +11,7 @@
 #import <DDASLLogger.h>
 #import <DDFileLogger.h>
 
-#import "IMVThemeManager.h"
+#import <IMVThemeManager.h>
 
 #import "IMVNavigationController.h"
 #import "IMVTabBarController.h"
@@ -24,6 +24,9 @@
 #import "IMVEntity.h"
 #import "IMVRestEntity.h"
 #import "IMVRestPage.h"
+#import "UIColor+IMVCommon.h"
+#import "UIFont+IMVCommon.h"
+#import "UIImage+IMVCommon.h"
 
 #ifdef DEBUG
 static const int ddLogLevel = LOG_LEVEL_VERBOSE;

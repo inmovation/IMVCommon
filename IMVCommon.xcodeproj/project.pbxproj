@@ -29,6 +29,11 @@
 		ADBBD32E1ADCB47E00E4A8E1 /* IMVUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBBD3291ADCB47E00E4A8E1 /* IMVUserManager.m */; };
 		ADBBD32F1ADCB47E00E4A8E1 /* UIImage+FixedOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBBD32B1ADCB47E00E4A8E1 /* UIImage+FixedOrientation.m */; };
 		ADBE1A9C1ADB5C790055CA36 /* ThemeDefault.bundle in Resources */ = {isa = PBXBuildFile; fileRef = ADBE1A9B1ADB5C790055CA36 /* ThemeDefault.bundle */; };
+		ADC966EE1AFC7E4A0048C8A2 /* UIColor+IMVCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC966ED1AFC7E4A0048C8A2 /* UIColor+IMVCommon.m */; };
+		ADC966F11AFC7E900048C8A2 /* UIFont+IMVCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC966F01AFC7E900048C8A2 /* UIFont+IMVCommon.m */; };
+		ADC966F41AFC7EAC0048C8A2 /* UIImage+IMVCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC966F31AFC7EAC0048C8A2 /* UIImage+IMVCommon.m */; };
+		ADC966FD1AFC8F830048C8A2 /* MEFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC966FC1AFC8F830048C8A2 /* MEFileManager.m */; };
+		ADC967001AFC8F940048C8A2 /* MEDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC966FF1AFC8F940048C8A2 /* MEDatabase.m */; };
 		ADD25CD61ADCEED200BBA195 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD25CD51ADCEED200BBA195 /* SettingViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +91,16 @@
 		ADBBD32A1ADCB47E00E4A8E1 /* UIImage+FixedOrientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FixedOrientation.h"; sourceTree = "<group>"; };
 		ADBBD32B1ADCB47E00E4A8E1 /* UIImage+FixedOrientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FixedOrientation.m"; sourceTree = "<group>"; };
 		ADBE1A9B1ADB5C790055CA36 /* ThemeDefault.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ThemeDefault.bundle; sourceTree = "<group>"; };
+		ADC966EC1AFC7E4A0048C8A2 /* UIColor+IMVCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+IMVCommon.h"; sourceTree = "<group>"; };
+		ADC966ED1AFC7E4A0048C8A2 /* UIColor+IMVCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+IMVCommon.m"; sourceTree = "<group>"; };
+		ADC966EF1AFC7E900048C8A2 /* UIFont+IMVCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+IMVCommon.h"; sourceTree = "<group>"; };
+		ADC966F01AFC7E900048C8A2 /* UIFont+IMVCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+IMVCommon.m"; sourceTree = "<group>"; };
+		ADC966F21AFC7EAC0048C8A2 /* UIImage+IMVCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+IMVCommon.h"; sourceTree = "<group>"; };
+		ADC966F31AFC7EAC0048C8A2 /* UIImage+IMVCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+IMVCommon.m"; sourceTree = "<group>"; };
+		ADC966FB1AFC8F830048C8A2 /* MEFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEFileManager.h; sourceTree = "<group>"; };
+		ADC966FC1AFC8F830048C8A2 /* MEFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEFileManager.m; sourceTree = "<group>"; };
+		ADC966FE1AFC8F940048C8A2 /* MEDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDatabase.h; sourceTree = "<group>"; };
+		ADC966FF1AFC8F940048C8A2 /* MEDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDatabase.m; sourceTree = "<group>"; };
 		ADD25CD41ADCEED200BBA195 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
 		ADD25CD51ADCEED200BBA195 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 		C9B4C9F76B6E4AFFD6638688 /* Pods-IMVCommon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMVCommon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IMVCommon/Pods-IMVCommon.debug.xcconfig"; sourceTree = "<group>"; };
@@ -147,6 +162,10 @@
 				AD0148561AD52626003355FD /* AppDelegate.m */,
 				AD0148581AD52626003355FD /* ViewController.h */,
 				AD0148591AD52626003355FD /* ViewController.m */,
+				ADC966FB1AFC8F830048C8A2 /* MEFileManager.h */,
+				ADC966FC1AFC8F830048C8A2 /* MEFileManager.m */,
+				ADC966FE1AFC8F940048C8A2 /* MEDatabase.h */,
+				ADC966FF1AFC8F940048C8A2 /* MEDatabase.m */,
 				ADD25CD41ADCEED200BBA195 /* SettingViewController.h */,
 				ADD25CD51ADCEED200BBA195 /* SettingViewController.m */,
 				AD01485B1AD52626003355FD /* Main.storyboard */,
@@ -254,6 +273,12 @@
 				ADBBD3291ADCB47E00E4A8E1 /* IMVUserManager.m */,
 				ADBBD32A1ADCB47E00E4A8E1 /* UIImage+FixedOrientation.h */,
 				ADBBD32B1ADCB47E00E4A8E1 /* UIImage+FixedOrientation.m */,
+				ADC966EC1AFC7E4A0048C8A2 /* UIColor+IMVCommon.h */,
+				ADC966ED1AFC7E4A0048C8A2 /* UIColor+IMVCommon.m */,
+				ADC966EF1AFC7E900048C8A2 /* UIFont+IMVCommon.h */,
+				ADC966F01AFC7E900048C8A2 /* UIFont+IMVCommon.m */,
+				ADC966F21AFC7EAC0048C8A2 /* UIImage+IMVCommon.h */,
+				ADC966F31AFC7EAC0048C8A2 /* UIImage+IMVCommon.m */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -403,10 +428,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD0148C71AD5299B003355FD /* IMVNavigationController.m in Sources */,
+				ADC966EE1AFC7E4A0048C8A2 /* UIColor+IMVCommon.m in Sources */,
+				ADC966FD1AFC8F830048C8A2 /* MEFileManager.m in Sources */,
 				AD01485A1AD52626003355FD /* ViewController.m in Sources */,
+				ADC966F11AFC7E900048C8A2 /* UIFont+IMVCommon.m in Sources */,
 				ADD25CD61ADCEED200BBA195 /* SettingViewController.m in Sources */,
 				ADBBD32D1ADCB47E00E4A8E1 /* IMVFileManager.m in Sources */,
 				ADBBD3211ADCB47300E4A8E1 /* IMVRestEntity.m in Sources */,
+				ADC966F41AFC7EAC0048C8A2 /* UIImage+IMVCommon.m in Sources */,
 				AD0148571AD52626003355FD /* AppDelegate.m in Sources */,
 				AD0148C81AD5299B003355FD /* IMVTabBarController.m in Sources */,
 				ADBBD32E1ADCB47E00E4A8E1 /* IMVUserManager.m in Sources */,
@@ -414,6 +443,7 @@
 				AD0148CB1AD5299B003355FD /* IMVTemplateViewController.m in Sources */,
 				ADBBD3221ADCB47300E4A8E1 /* IMVRestPage.m in Sources */,
 				AD0148541AD52626003355FD /* main.m in Sources */,
+				ADC967001AFC8F940048C8A2 /* MEDatabase.m in Sources */,
 				ADBBD3201ADCB47300E4A8E1 /* IMVEntity.m in Sources */,
 				ADBBD3191ADCA56D00E4A8E1 /* IMVTemplateViewController+Hints.m in Sources */,
 				ADBBD32F1ADCB47E00E4A8E1 /* UIImage+FixedOrientation.m in Sources */,

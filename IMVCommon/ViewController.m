@@ -10,6 +10,8 @@
 #import "IMVTemplateViewController+Hints.h"
 #import "IMVCommon.h"
 #import "SettingViewController.h"
+#import "MEDatabase.h"
+#import "MEFileManager.h"
 
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -26,6 +28,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    DDLogError(@"fuck");
+    DDLogInfo(@"fuck");
+    DDLogWarn(@"fuck");
+    
     self.navigationItem.title = @"设置";
     
     _icons = @[@[@"default_user"], @[@"me_icon_about"]];
@@ -36,6 +42,10 @@
     _table.delegate = self;
     _table.dataSource = self;
     [self.view addSubview:_table];
+    
+    
+    [IMVUserManager sharedInstence].login = @"11";
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -89,6 +99,7 @@
         cell.imageView.image = [UIImage imageForName:icon];
         cell.textLabel.text = title;
         cell.detailTextLabel.text = value;
+
     }
     else if (indexPath.section == 2)
     {
@@ -125,6 +136,12 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    [IMVUserManager sharedInstence].login = [NSString stringWithFormat:@"%li", indexPath.section];
+    DDLogInfo(@"userManager:%@", [IMVUserManager sharedInstence].userId);
+    DDLogInfo(@"fileManager:%@", [MEFileManager sharedInstence].examsPath);
+    DDLogInfo(@"database:%@", [MEDatabase sharedInstence].dbPath);
+    
     if (indexPath.section == 1)
     {
         if (indexPath.row == 0) {

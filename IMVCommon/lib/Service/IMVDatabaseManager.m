@@ -26,7 +26,7 @@
     self = [super init];
     if (self) {
         [self initialize];
-        [self.userManager addObserver:self forKeyPath:@"userId" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:nil];
+        [self.userManager addObserver:self forKeyPath:@"login" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:nil];
     }
     return self;
 }
@@ -42,7 +42,7 @@
 
 - (void)dealloc
 {
-    [self.userManager removeObserver:self forKeyPath:@"userId" context:nil];
+    [self.userManager removeObserver:self forKeyPath:@"login" context:nil];
 }
 
 - (NSString *)dbName
@@ -77,7 +77,7 @@
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
     if (object == self.userManager) {
-        if ([keyPath isEqualToString:@"userId"]) {
+        if ([keyPath isEqualToString:@"login"]) {
             NSString *new = [change objectForKey:@"new"];
             NSString *old = [change objectForKey:@"old"];
             if (new && ![new isEqual:[NSNull null]] && ![new isEqualToString:old]) {

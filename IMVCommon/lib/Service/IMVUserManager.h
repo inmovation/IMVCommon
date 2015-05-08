@@ -19,7 +19,7 @@
 @property (strong, nonatomic) NSString *userId;
 
 /**
- *  用户登录账号
+ *  用户登录账号，必填，用于区分用户
  */
 @property (strong, nonatomic) NSString *login;
 
