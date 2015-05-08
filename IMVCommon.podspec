@@ -35,9 +35,10 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  s.dependency "CocoaLumberjack"
-  s.dependency "UICKeyChainStore"
-  s.dependency "IMVTheme"
+  # s.dependencies = "IMVTheme", "CocoaLumberjack", "UICKeyChainStore"
+  s.dependency 'IMVTheme',' ~>0.0.2'
+  s.dependency 'CocoaLumberjack'
+  s.dependency 'UICKeyChainStore'
 
   # s.dependency "CocoaLumberjack"
 
