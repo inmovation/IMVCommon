@@ -7,6 +7,9 @@
 //
 
 #import "IMVThemeManager.h"
+#import "UIColor+IMVCommon.h"
+#import "UIFont+IMVCommon.h"
+#import "UIImage+IMVCommon.h"
 
 #import "IMVTabBarController.h"
 #import "IMVTabBarItem.h"

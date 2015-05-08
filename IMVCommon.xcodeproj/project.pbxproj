@@ -34,6 +34,7 @@
 		ADC966F41AFC7EAC0048C8A2 /* UIImage+IMVCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC966F31AFC7EAC0048C8A2 /* UIImage+IMVCommon.m */; };
 		ADC966FD1AFC8F830048C8A2 /* MEFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC966FC1AFC8F830048C8A2 /* MEFileManager.m */; };
 		ADC967001AFC8F940048C8A2 /* MEDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC966FF1AFC8F940048C8A2 /* MEDatabase.m */; };
+		ADC967021AFC93AC0048C8A2 /* IMVCommon.podspec in Resources */ = {isa = PBXBuildFile; fileRef = ADC967011AFC93AC0048C8A2 /* IMVCommon.podspec */; };
 		ADD25CD61ADCEED200BBA195 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD25CD51ADCEED200BBA195 /* SettingViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -101,6 +102,7 @@
 		ADC966FC1AFC8F830048C8A2 /* MEFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEFileManager.m; sourceTree = "<group>"; };
 		ADC966FE1AFC8F940048C8A2 /* MEDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDatabase.h; sourceTree = "<group>"; };
 		ADC966FF1AFC8F940048C8A2 /* MEDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDatabase.m; sourceTree = "<group>"; };
+		ADC967011AFC93AC0048C8A2 /* IMVCommon.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IMVCommon.podspec; sourceTree = "<group>"; };
 		ADD25CD41ADCEED200BBA195 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
 		ADD25CD51ADCEED200BBA195 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 		C9B4C9F76B6E4AFFD6638688 /* Pods-IMVCommon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMVCommon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IMVCommon/Pods-IMVCommon.debug.xcconfig"; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 		AD0148501AD52626003355FD /* IMVCommon */ = {
 			isa = PBXGroup;
 			children = (
+				ADC967011AFC93AC0048C8A2 /* IMVCommon.podspec */,
 				AD0148A41AD5299B003355FD /* lib */,
 				AD0148551AD52626003355FD /* AppDelegate.h */,
 				AD0148561AD52626003355FD /* AppDelegate.m */,
@@ -374,6 +377,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD01485D1AD52626003355FD /* Main.storyboard in Resources */,
+				ADC967021AFC93AC0048C8A2 /* IMVCommon.podspec in Resources */,
 				AD0148621AD52626003355FD /* LaunchScreen.xib in Resources */,
 				AD01485F1AD52626003355FD /* Images.xcassets in Resources */,
 				ADBE1A9C1ADB5C790055CA36 /* ThemeDefault.bundle in Resources */,

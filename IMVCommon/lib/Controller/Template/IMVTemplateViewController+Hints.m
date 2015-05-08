@@ -6,6 +6,7 @@
 //  Copyright (c) 2015年 inmovation. All rights reserved.
 //
 #import "UIImage+IMVCommon.h"
+#import "UIColor+IMVCommon.h"
 
 #import "IMVTemplateViewController+Hints.h"
 

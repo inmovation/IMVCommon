@@ -7,6 +7,7 @@
 //
 
 #import "IMVTemplateViewController.h"
+#import "UIColor+IMVCommon.h"
 
 @implementation IMVTemplateViewController
 
