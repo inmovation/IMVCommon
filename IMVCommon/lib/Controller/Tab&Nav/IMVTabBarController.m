@@ -1,6 +1,6 @@
 //
-//  SFTabBarController.m
-//  TCA
+//  IMVTabBarController.m
+//  IMVCommon
 //
 //  Created by shaohua.chen on 14-4-4.
 //  Copyright (c) 2014年 shaohua.chen. All rights reserved.
@@ -13,6 +13,8 @@
 
 #import "IMVTabBarController.h"
 #import "IMVTabBarItem.h"
+#import "IMVNavigationController.h"
+#import "IMVInjectionContext.h"
 
 @interface IMVTabBarController ()
 
@@ -88,6 +90,69 @@
         tabBarItem.highlightedImage = [UIImage imageForName:[selectedImages objectAtIndex:i]];
         vc.tabBarItem = tabBarItem;
     }
+}
+
+
+#pragma mark - IMVInjection
+- (void)inject
+{
+    NSArray *tabInjectors = [[IMVInjectionContext sharedInstence] getInjectorsWithInjection:@protocol(IMVTabBarInjection)];
+    NSMutableArray *vcs = [NSMutableArray arrayWithCapacity:tabInjectors.count];
+    NSMutableArray *titles = [NSMutableArray arrayWithCapacity:tabInjectors.count];
+    NSMutableArray *normalImages = [NSMutableArray arrayWithCapacity:tabInjectors.count];
+    NSMutableArray *selectedImages = [NSMutableArray arrayWithCapacity:tabInjectors.count];
+
+    [tabInjectors enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        if ([obj isKindOfClass:[UIViewController class]]) {
+            
+            UIViewController *vc = obj;
+            NSString *title = [obj respondsToSelector:@selector(tabTitle)]?[obj tabTitle]:@"";
+            NSString *normalImage = [obj respondsToSelector:@selector(tabNormalImage)]?[obj tabNormalImage]:@"";
+            NSString *selectedImage = [obj respondsToSelector:@selector(tabSelectedImage)]?[obj tabSelectedImage]:@"";
+            NSInteger index = [obj respondsToSelector:@selector(tabIndex)]?[obj tabIndex]:0;
+
+            if ([obj conformsToProtocol:@protocol(IMVNavigationInjection)]) {
+                IMVNavigationController *navi = [[IMVNavigationController alloc] initWithRootViewController:vc];
+                vc = navi;
+
+            }
+            if (idx == 0) {
+                [vcs addObject:vc];
+                [titles addObject:title];
+                [normalImages addObject:normalImage];
+                [selectedImages addObject:selectedImage];
+            }
+            else
+            {
+                for (int i=0; i<vcs.count; i++) { //根据tabIndex将ViewController排序
+                    id vcTemp = [vcs objectAtIndex:i];
+                    if ([vcTemp isKindOfClass:[UINavigationController class]]) {
+                        vcTemp = [[vcTemp viewControllers] firstObject];
+                    }
+                    if ([vcTemp tabIndex]>index) {
+                        [vcs insertObject:vc atIndex:i];
+                        [titles insertObject:title atIndex:i];
+                        [normalImages insertObject:normalImage atIndex:i];
+                        [selectedImages insertObject:selectedImage atIndex:i];
+                        break;
+                    }
+                    if (i==vcs.count-1) {
+                        [vcs addObject:vc];
+                        [titles addObject:title];
+                        [normalImages addObject:normalImage];
+                        [selectedImages addObject:selectedImage];
+                        break;
+                    }
+                }
+            }
+        }
+        else
+        {
+            NSLog(@"%@ can't inject %@, only support UIViewController", obj, @protocol(IMVTabBarInjection));
+        }
+    }];
+    
+    [self setViewControllers:vcs itemTitles:titles itemNormalImages:normalImages itemSelectedImages:selectedImages];
 }
 
 

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "IMVTemplateViewController.h"
+#import "IMVCommon.h"
 
 @interface ViewController : IMVTemplateViewController
 

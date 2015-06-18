@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "IMVCommon"
-  s.version      = "0.0.3"
+  s.version      = "0.0.4"
   s.summary      = "common classes for all projects."
 
   s.description  = <<-DESC
@@ -19,7 +19,6 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/inmovation/IMVCommon.git", :tag => "0.0.3" }
 
-  s.source_files  = "IMVCommon/lib/*.h", "IMVCommon/lib/**/*.{h,m}"
   # s.exclude_files = "Classes/Exclude"
   # s.public_header_files = "Classes/**/*.h"
   # s.resource  = "icon.png"
@@ -34,11 +33,23 @@ Pod::Spec.new do |s|
 
   s.requires_arc = true
 
-  # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   s.dependency "CocoaLumberjack"
   s.dependency "UICKeyChainStore"
-  s.dependency "IMVTheme"
-
+  s.dependency 'IMVTheme', '~>0.0.2'
   # s.dependency "CocoaLumberjack"
+
+  # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
+
+  s.subspec 'Controller' do |co|
+    co.source_files  = "IMVCommon/lib/Controller/*.h", "IMVCommon/lib/Controller/**/*.{h,m}"
+  end
+
+  s.subspec 'Model' do |mo|
+    mo.source_files  = "IMVCommon/lib/Model/*.h", "IMVCommon/lib/Model/**/*.{h,m}"
+  end
+
+  s.subspec 'Service' do |se|
+    se.source_files  = "IMVCommon/lib/Service/*.h", "IMVCommon/lib/service/**/*.{h,m}"
+  end
 
 end

@@ -1,17 +1,28 @@
 //
-//  SFTabBarController.h
-//  TCA
+//  IMVTabBarController.h
+//  IMVCommon
 //
 //  Created by shaohua.chen on 14-4-4.
 //  Copyright (c) 2014年 shaohua.chen. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
+#import "IMVInjection.h"
+
+@protocol IMVTabBarInjection <NSObject, IMVInjection>
+
+@optional
+- (NSInteger)tabIndex;
+- (NSString *)tabTitle;
+- (NSString *)tabSelectedImage;
+- (NSString *)tabNormalImage;
+
+@end
 
 /**
  *  从配置中读取样式，支持切换
  */
-@interface IMVTabBarController : UITabBarController
+@interface IMVTabBarController : UITabBarController <IMVInjection>
 
 /**
  *  是否透明，支持ios5，效果等同于tabBar.translucent，

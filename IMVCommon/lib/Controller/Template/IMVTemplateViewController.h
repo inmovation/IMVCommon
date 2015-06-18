@@ -1,5 +1,5 @@
 //
-//  TemplateViewController.h
+//  IMVTemplateViewController.h
 //  IMVCommon
 //
 //  Created by shaohua on 1/14/15.

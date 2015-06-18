@@ -1,10 +1,12 @@
 //
 //  IMVTemplateViewController+PickImage.m
-//  MobileExam
+//  IMVCommon
 //
 //  Created by 陈少华 on 15/4/2.
 //  Copyright (c) 2015年 inmovation. All rights reserved.
 //
+#import <objc/runtime.h>
+
 
 #import "IMVTemplateViewController+PickImage.h"
 #import "UIImage+FixedOrientation.h"
@@ -13,30 +15,46 @@
 
 @interface IMVTemplateViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIActionSheetDelegate>
 
+@property (copy) void (^completion)(NSData *imgData);
+
 @end
 
 @implementation IMVTemplateViewController (PickImage)
+
+#pragma mark getter setter
+
+- (void(^)(NSData *))completion
+{
+    return objc_getAssociatedObject(self, @selector(completion));
+}
+
+- (void)setCompletion:(void (^)(NSData *))completionBlock
+{
+    objc_setAssociatedObject(self, @selector(completion), completionBlock, OBJC_ASSOCIATION_RETAIN);
+}
+
 
 - (void)pickedImageWithData:(NSData *)imgData
 {
     
 }
 
-- (void)pickImageAndAllowsEditing:(BOOL)editing
+- (void)pickImageAndAllowsEditing:(BOOL)editing completion:(void (^)(NSData *imgData))completionBlock
 {
+    self.completion = completionBlock;
     UIActionSheet *choosePhotoActionSheet;
     
     if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
-        choosePhotoActionSheet = [[UIActionSheet alloc] initWithTitle:nil
+        choosePhotoActionSheet = [[UIActionSheet alloc] initWithTitle:@"请选择获取图片的方式"
                                                              delegate:self
                                                     cancelButtonTitle:@"取消"
-                                               destructiveButtonTitle:nil
-                                                    otherButtonTitles:@"拍照", @"从手机相册选择", nil];
+                                               destructiveButtonTitle:@"拍照"
+                                                    otherButtonTitles:@"从手机相册选择", nil];
     } else {
-        choosePhotoActionSheet = [[UIActionSheet alloc] initWithTitle:@"取消"
+        choosePhotoActionSheet = [[UIActionSheet alloc] initWithTitle:@"请选择获取图片的方式"
                                                              delegate:self
-                                                    cancelButtonTitle:@"从手机相册选择"
-                                               destructiveButtonTitle:nil
+                                                    cancelButtonTitle:@"取消"
+                                               destructiveButtonTitle:@"从手机相册选择"
                                                     otherButtonTitles:nil, nil];
     }
     choosePhotoActionSheet.tag = IMImagePickerActionsheetTag;
@@ -47,8 +65,10 @@
     [choosePhotoActionSheet showFromTabBar:self.tabBarController.tabBar];
 }
 
-- (void)pickImageWithSourceType:(UIImagePickerControllerSourceType)sourceType allowsEditting:(BOOL)allowEditing
+- (void)pickImageWithSourceType:(UIImagePickerControllerSourceType)sourceType allowsEditting:(BOOL)allowEditing completion:(void (^)(NSData *imgData))completionBlock
 {
+    self.completion = completionBlock;
+    
     if (sourceType == UIImagePickerControllerSourceTypeCamera && ![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
     {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"alert", @"") message:NSLocalizedString(@"alertNotSupportCamera", @"") delegate:nil cancelButtonTitle:NSLocalizedString(@"alertSubmit", @"") otherButtonTitles:nil, nil];
@@ -89,7 +109,7 @@
             }
         }
         
-        [self pickImageWithSourceType:sourceType allowsEditting:actionSheet.tag-IMImagePickerActionsheetTag];
+        [self pickImageWithSourceType:sourceType allowsEditting:actionSheet.tag-IMImagePickerActionsheetTag completion:self.completion];
     }
 }
 
@@ -111,8 +131,9 @@
         fixOrientationImage = [[info objectForKey:UIImagePickerControllerOriginalImage] imageWithFixedOrientation];
         imgData = UIImageJPEGRepresentation(fixOrientationImage, 0.5);
     }
-    [self pickedImageWithData:imgData];
-    
+    if (self.completion) {
+        self.completion(imgData);
+    }
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{

@@ -1,12 +1,18 @@
 //
-//  SFNavigationController.h
-//  TCA
+//  IMVNavigationController.h
+//  IMVCommon
 //
 //  Created by shaohua.chen on 14-4-4.
 //  Copyright (c) 2014年 shaohua.chen. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
+#import "IMVInjection.h"
+
+@protocol IMVNavigationInjection <NSObject, IMVInjection>
+
+
+@end
 
 /**
  *  从配置中读取样式，支持切换

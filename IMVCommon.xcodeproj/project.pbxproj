@@ -20,7 +20,10 @@
 		AD0148C91AD5299B003355FD /* IMVTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0148AC1AD5299B003355FD /* IMVTabBarItem.m */; };
 		AD0148CA1AD5299B003355FD /* IMVTemplateViewController+PickImage.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0148AF1AD5299B003355FD /* IMVTemplateViewController+PickImage.m */; };
 		AD0148CB1AD5299B003355FD /* IMVTemplateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0148B11AD5299B003355FD /* IMVTemplateViewController.m */; };
-		ADBBD3191ADCA56D00E4A8E1 /* IMVTemplateViewController+Hints.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBBD3181ADCA56D00E4A8E1 /* IMVTemplateViewController+Hints.m */; };
+		AD8D7AB41B31BEE300568486 /* IMVInjectionContext.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8D7AB31B31BEE300568486 /* IMVInjectionContext.m */; };
+		AD8D7ABA1B31C74900568486 /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8D7AB91B31C74900568486 /* ViewController2.m */; };
+		AD8D7ABD1B32910200568486 /* TabBarControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8D7ABC1B32910200568486 /* TabBarControllerViewController.m */; };
+		ADBA44491AFCBE8A008BCB58 /* IMVCommon.podspec in Resources */ = {isa = PBXBuildFile; fileRef = ADBA44481AFCBE8A008BCB58 /* IMVCommon.podspec */; };
 		ADBBD3201ADCB47300E4A8E1 /* IMVEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBBD31B1ADCB47300E4A8E1 /* IMVEntity.m */; };
 		ADBBD3211ADCB47300E4A8E1 /* IMVRestEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBBD31D1ADCB47300E4A8E1 /* IMVRestEntity.m */; };
 		ADBBD3221ADCB47300E4A8E1 /* IMVRestPage.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBBD31F1ADCB47300E4A8E1 /* IMVRestPage.m */; };
@@ -34,7 +37,6 @@
 		ADC966F41AFC7EAC0048C8A2 /* UIImage+IMVCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC966F31AFC7EAC0048C8A2 /* UIImage+IMVCommon.m */; };
 		ADC966FD1AFC8F830048C8A2 /* MEFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC966FC1AFC8F830048C8A2 /* MEFileManager.m */; };
 		ADC967001AFC8F940048C8A2 /* MEDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC966FF1AFC8F940048C8A2 /* MEDatabase.m */; };
-		ADC967021AFC93AC0048C8A2 /* IMVCommon.podspec in Resources */ = {isa = PBXBuildFile; fileRef = ADC967011AFC93AC0048C8A2 /* IMVCommon.podspec */; };
 		ADD25CD61ADCEED200BBA195 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD25CD51ADCEED200BBA195 /* SettingViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -75,8 +77,14 @@
 		AD0148B01AD5299B003355FD /* IMVTemplateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMVTemplateViewController.h; sourceTree = "<group>"; };
 		AD0148B11AD5299B003355FD /* IMVTemplateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMVTemplateViewController.m; sourceTree = "<group>"; };
 		AD0148B21AD5299B003355FD /* IMVCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMVCommon.h; sourceTree = "<group>"; };
-		ADBBD3171ADCA56D00E4A8E1 /* IMVTemplateViewController+Hints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IMVTemplateViewController+Hints.h"; sourceTree = "<group>"; };
-		ADBBD3181ADCA56D00E4A8E1 /* IMVTemplateViewController+Hints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IMVTemplateViewController+Hints.m"; sourceTree = "<group>"; };
+		AD59498E1B3174FC004D6903 /* IMVInjection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMVInjection.h; sourceTree = "<group>"; };
+		AD8D7AB21B31BEE300568486 /* IMVInjectionContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMVInjectionContext.h; sourceTree = "<group>"; };
+		AD8D7AB31B31BEE300568486 /* IMVInjectionContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMVInjectionContext.m; sourceTree = "<group>"; };
+		AD8D7AB81B31C74900568486 /* ViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController2.h; sourceTree = "<group>"; };
+		AD8D7AB91B31C74900568486 /* ViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController2.m; sourceTree = "<group>"; };
+		AD8D7ABB1B32910100568486 /* TabBarControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarControllerViewController.h; sourceTree = "<group>"; };
+		AD8D7ABC1B32910200568486 /* TabBarControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarControllerViewController.m; sourceTree = "<group>"; };
+		ADBA44481AFCBE8A008BCB58 /* IMVCommon.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IMVCommon.podspec; sourceTree = "<group>"; };
 		ADBBD31A1ADCB47300E4A8E1 /* IMVEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMVEntity.h; sourceTree = "<group>"; };
 		ADBBD31B1ADCB47300E4A8E1 /* IMVEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMVEntity.m; sourceTree = "<group>"; };
 		ADBBD31C1ADCB47300E4A8E1 /* IMVRestEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMVRestEntity.h; sourceTree = "<group>"; };
@@ -92,6 +100,7 @@
 		ADBBD32A1ADCB47E00E4A8E1 /* UIImage+FixedOrientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FixedOrientation.h"; sourceTree = "<group>"; };
 		ADBBD32B1ADCB47E00E4A8E1 /* UIImage+FixedOrientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FixedOrientation.m"; sourceTree = "<group>"; };
 		ADBE1A9B1ADB5C790055CA36 /* ThemeDefault.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ThemeDefault.bundle; sourceTree = "<group>"; };
+		ADC42DB31B1F099500188327 /* IMVLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMVLogger.h; sourceTree = "<group>"; };
 		ADC966EC1AFC7E4A0048C8A2 /* UIColor+IMVCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+IMVCommon.h"; sourceTree = "<group>"; };
 		ADC966ED1AFC7E4A0048C8A2 /* UIColor+IMVCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+IMVCommon.m"; sourceTree = "<group>"; };
 		ADC966EF1AFC7E900048C8A2 /* UIFont+IMVCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+IMVCommon.h"; sourceTree = "<group>"; };
@@ -102,7 +111,6 @@
 		ADC966FC1AFC8F830048C8A2 /* MEFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEFileManager.m; sourceTree = "<group>"; };
 		ADC966FE1AFC8F940048C8A2 /* MEDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDatabase.h; sourceTree = "<group>"; };
 		ADC966FF1AFC8F940048C8A2 /* MEDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDatabase.m; sourceTree = "<group>"; };
-		ADC967011AFC93AC0048C8A2 /* IMVCommon.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IMVCommon.podspec; sourceTree = "<group>"; };
 		ADD25CD41ADCEED200BBA195 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
 		ADD25CD51ADCEED200BBA195 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 		C9B4C9F76B6E4AFFD6638688 /* Pods-IMVCommon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMVCommon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IMVCommon/Pods-IMVCommon.debug.xcconfig"; sourceTree = "<group>"; };
@@ -139,6 +147,7 @@
 		AD0148451AD52626003355FD = {
 			isa = PBXGroup;
 			children = (
+				ADBA44481AFCBE8A008BCB58 /* IMVCommon.podspec */,
 				AD0148501AD52626003355FD /* IMVCommon */,
 				AD01486A1AD52626003355FD /* IMVCommonTests */,
 				AD01484F1AD52626003355FD /* Products */,
@@ -159,12 +168,15 @@
 		AD0148501AD52626003355FD /* IMVCommon */ = {
 			isa = PBXGroup;
 			children = (
-				ADC967011AFC93AC0048C8A2 /* IMVCommon.podspec */,
 				AD0148A41AD5299B003355FD /* lib */,
 				AD0148551AD52626003355FD /* AppDelegate.h */,
 				AD0148561AD52626003355FD /* AppDelegate.m */,
 				AD0148581AD52626003355FD /* ViewController.h */,
 				AD0148591AD52626003355FD /* ViewController.m */,
+				AD8D7ABB1B32910100568486 /* TabBarControllerViewController.h */,
+				AD8D7ABC1B32910200568486 /* TabBarControllerViewController.m */,
+				AD8D7AB81B31C74900568486 /* ViewController2.h */,
+				AD8D7AB91B31C74900568486 /* ViewController2.m */,
 				ADC966FB1AFC8F830048C8A2 /* MEFileManager.h */,
 				ADC966FC1AFC8F830048C8A2 /* MEFileManager.m */,
 				ADC966FE1AFC8F940048C8A2 /* MEDatabase.h */,
@@ -246,8 +258,6 @@
 				AD0148AF1AD5299B003355FD /* IMVTemplateViewController+PickImage.m */,
 				AD0148B01AD5299B003355FD /* IMVTemplateViewController.h */,
 				AD0148B11AD5299B003355FD /* IMVTemplateViewController.m */,
-				ADBBD3171ADCA56D00E4A8E1 /* IMVTemplateViewController+Hints.h */,
-				ADBBD3181ADCA56D00E4A8E1 /* IMVTemplateViewController+Hints.m */,
 			);
 			path = Template;
 			sourceTree = "<group>";
@@ -274,6 +284,7 @@
 				ADBBD3271ADCB47E00E4A8E1 /* IMVFileManager.m */,
 				ADBBD3281ADCB47E00E4A8E1 /* IMVUserManager.h */,
 				ADBBD3291ADCB47E00E4A8E1 /* IMVUserManager.m */,
+				ADC42DB31B1F099500188327 /* IMVLogger.h */,
 				ADBBD32A1ADCB47E00E4A8E1 /* UIImage+FixedOrientation.h */,
 				ADBBD32B1ADCB47E00E4A8E1 /* UIImage+FixedOrientation.m */,
 				ADC966EC1AFC7E4A0048C8A2 /* UIColor+IMVCommon.h */,
@@ -282,6 +293,9 @@
 				ADC966F01AFC7E900048C8A2 /* UIFont+IMVCommon.m */,
 				ADC966F21AFC7EAC0048C8A2 /* UIImage+IMVCommon.h */,
 				ADC966F31AFC7EAC0048C8A2 /* UIImage+IMVCommon.m */,
+				AD59498E1B3174FC004D6903 /* IMVInjection.h */,
+				AD8D7AB21B31BEE300568486 /* IMVInjectionContext.h */,
+				AD8D7AB31B31BEE300568486 /* IMVInjectionContext.m */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -377,7 +391,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD01485D1AD52626003355FD /* Main.storyboard in Resources */,
-				ADC967021AFC93AC0048C8A2 /* IMVCommon.podspec in Resources */,
+				ADBA44491AFCBE8A008BCB58 /* IMVCommon.podspec in Resources */,
 				AD0148621AD52626003355FD /* LaunchScreen.xib in Resources */,
 				AD01485F1AD52626003355FD /* Images.xcassets in Resources */,
 				ADBE1A9C1ADB5C790055CA36 /* ThemeDefault.bundle in Resources */,
@@ -443,15 +457,17 @@
 				AD0148571AD52626003355FD /* AppDelegate.m in Sources */,
 				AD0148C81AD5299B003355FD /* IMVTabBarController.m in Sources */,
 				ADBBD32E1ADCB47E00E4A8E1 /* IMVUserManager.m in Sources */,
+				AD8D7ABD1B32910200568486 /* TabBarControllerViewController.m in Sources */,
+				AD8D7AB41B31BEE300568486 /* IMVInjectionContext.m in Sources */,
 				AD0148CA1AD5299B003355FD /* IMVTemplateViewController+PickImage.m in Sources */,
 				AD0148CB1AD5299B003355FD /* IMVTemplateViewController.m in Sources */,
 				ADBBD3221ADCB47300E4A8E1 /* IMVRestPage.m in Sources */,
 				AD0148541AD52626003355FD /* main.m in Sources */,
 				ADC967001AFC8F940048C8A2 /* MEDatabase.m in Sources */,
 				ADBBD3201ADCB47300E4A8E1 /* IMVEntity.m in Sources */,
-				ADBBD3191ADCA56D00E4A8E1 /* IMVTemplateViewController+Hints.m in Sources */,
 				ADBBD32F1ADCB47E00E4A8E1 /* UIImage+FixedOrientation.m in Sources */,
 				AD0148C91AD5299B003355FD /* IMVTabBarItem.m in Sources */,
+				AD8D7ABA1B31C74900568486 /* ViewController2.m in Sources */,
 				ADBBD32C1ADCB47E00E4A8E1 /* IMVDatabaseManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

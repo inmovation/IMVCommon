@@ -1,6 +1,6 @@
 //
-//  SFNavigationController.m
-//  TCA
+//  IMVNavigationController.m
+//  IMVCommon
 //
 //  Created by shaohua.chen on 14-4-4.
 //  Copyright (c) 2014年 shaohua.chen. All rights reserved.

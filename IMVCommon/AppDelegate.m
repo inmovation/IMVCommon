@@ -5,11 +5,14 @@
 //  Created by 陈少华 on 15/4/8.
 //  Copyright (c) 2015年 inmovation. All rights reserved.
 //
+#import <objc/runtime.h>
+
 
 #import "AppDelegate.h"
 #import "IMVCommon.h"
 
 #import "ViewController.h"
+#import "IMVInjectionContext.h"
 
 @interface AppDelegate ()
 
@@ -20,24 +23,25 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    [DDLog addLogger:[DDTTYLogger sharedInstance]];
-    [[DDTTYLogger sharedInstance] setColorsEnabled:YES];
     // Override point for customization after application launch.
     
+    
+    NSDate *date1 = [NSDate date];
     
     [[IMVThemeManager sharedInstence] useTheme:@"ThemeDefault" type:themeTypeBundle];
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     [self.window makeKeyAndVisible];
     
-    ViewController *vc = [[ViewController alloc] initWithNibName:nil bundle:nil];
-    IMVNavigationController *navi = [[IMVNavigationController alloc] initWithRootViewController:vc];
+//    ViewController *vc = [[ViewController alloc] initWithNibName:nil bundle:nil];
+//    IMVNavigationController *navi = [[IMVNavigationController alloc] initWithRootViewController:vc];
+//    
+//    IMVTabBarController *tab = [[IMVTabBarController alloc] initWithNibName:nil bundle:nil];
+//    [tab setViewControllers:@[navi] itemTitles:@[@"设置"] itemNormalImages:@[@"settingNormal"] itemSelectedImages:@[@"settingSelected"]];
     
-    IMVTabBarController *tab = [[IMVTabBarController alloc] initWithNibName:nil bundle:nil];
-    [tab setViewControllers:@[navi] itemTitles:@[@"设置"] itemNormalImages:@[@"settingNormal"] itemSelectedImages:@[@"settingSelected"]];
+    self.window.rootViewController = (UITabBarController *)[[IMVInjectionContext sharedInstence] getInjectorWithName:@"IMVTabBarController"];
     
-    self.window.rootViewController = tab;
-    
+    NSLog(@"%f", [[NSDate date] timeIntervalSinceDate:date1]);
     return YES;
     
 }

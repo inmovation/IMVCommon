@@ -1,12 +1,13 @@
 //
-//  TCAJsonObject.m
-//  TCA
+//  IMVEntity.m
+//  IMVCommon
 //
 //  Created by shaohua.chen on 14-4-4.
 //  Copyright (c) 2014年 shaohua.chen. All rights reserved.
 //
 
 #import "IMVEntity.h"
+#import "IMVCommon.h"
 
 @implementation IMVEntity
 
@@ -32,7 +33,7 @@
 
 - (void)setValue:(id)value forUndefinedKey:(NSString *)key
 {
-    NSLog(@"key(%@.%@) is not found", NSStringFromClass([self class]), key);
+    NSLogError(@"key(%@.%@) is not found", NSStringFromClass([self class]), key);
 }
 
 -(id)valueForUndefinedKey:(NSString *)key{

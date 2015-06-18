@@ -1,5 +1,5 @@
 //
-//  TemplateViewController.m
+//  IMVTemplateViewController.m
 //  IMVCommon
 //
 //  Created by 陈少华 on 1/14/15.

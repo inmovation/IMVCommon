@@ -7,13 +7,13 @@
 //
 
 #import "ViewController.h"
-#import "IMVTemplateViewController+Hints.h"
 #import "IMVCommon.h"
 #import "SettingViewController.h"
 #import "MEDatabase.h"
 #import "MEFileManager.h"
+#import "IMVTemplateViewController+PickImage.h"
 
-@interface ViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface ViewController () <UITableViewDataSource, UITableViewDelegate, IMVNavigationInjection, IMVTabBarInjection>
 
 @property (strong, nonatomic) UITableView *table;
 @property (strong, nonatomic) NSArray *icons;
@@ -28,10 +28,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    DDLogError(@"fuck");
-    DDLogInfo(@"fuck");
-    DDLogWarn(@"fuck");
-    
+    NSLogError(@"fuck");
+    NSLogInfo(@"fuck");
+    NSLogWarning(@"fuck");
+    NSLogDebug(@"fuck");
+
     self.navigationItem.title = @"设置";
     
     _icons = @[@[@"default_user"], @[@"me_icon_about"]];
@@ -138,23 +139,47 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     [IMVUserManager sharedInstence].login = [NSString stringWithFormat:@"%li", indexPath.section];
-    DDLogInfo(@"userManager:%@", [IMVUserManager sharedInstence].userId);
-    DDLogInfo(@"fileManager:%@", [MEFileManager sharedInstence].examsPath);
-    DDLogInfo(@"database:%@", [MEDatabase sharedInstence].dbPath);
-    
+
+    NSLogWarning(@"userManager:%@", [IMVUserManager sharedInstence].userId);
+    NSLogError(@"fileManager:%@", [MEFileManager sharedInstence].examsPath);
+    NSLogInfo(@"database:%@", [MEDatabase sharedInstence].dbPath);
+
     if (indexPath.section == 1)
     {
         if (indexPath.row == 0) {
-//            [self hideEmptyView];
             SettingViewController *settingVC = [[SettingViewController alloc] initWithNibName:nil bundle:nil];
             [self.navigationController pushViewController:settingVC animated:YES];
         }
     }
     if (indexPath.section == 0) {
         if (indexPath.row == 0) {
-//            [self showEmptyViewWithFrame:self.view.bounds status:@"点击设置取消"];
+            [self pickImageAndAllowsEditing:YES completion:^(NSData *imgData) {
+                UITableViewCell *cell = [_table cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+                cell.imageView.image = [UIImage imageWithData:imgData];
+            }];
         }
     }
+}
+
+
+
+#pragma mark IMVTabBarControllerInjection
+- (NSString *)tabTitle
+{
+    return @"设置";
+}
+- (NSString *)tabNormalImage
+{
+    return @"settingNormal";
+}
+- (NSString *)tabSelectedImage
+{
+    return @"settingSelected";
+}
+
+- (NSInteger)tabIndex
+{
+    return 5;
 }
 
 @end
